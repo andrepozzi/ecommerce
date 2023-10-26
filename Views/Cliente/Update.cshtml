@@ -1,0 +1,24 @@
+@{ Layout = "/Views/Shared/Layout.cshtml"; }
+
+<h1>Atualização de Cliente</h1>
+
+<form action="/cliente/update" method="POST">
+
+    <div>
+        <label>Nome</label>
+        <input type="text" class="form-control" name="name" value="@Model.Name"/>
+    </div>
+
+    <div>
+        <label>Email</label>
+        <input type="text" class="form-control" name="email" value="@Model.Email"/>
+    </div>
+
+     <div>
+        <label>Password</label>
+        <input type="password" class="form-control"name="Password" value="@Model.Password"/>
+    </div>
+
+    <button class="btn btn-primary" style="margin-top: 20px">Salvar</button>
+
+</form>

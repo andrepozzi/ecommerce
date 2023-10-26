@@ -1,0 +1,11 @@
+@model Cliente
+@{ Layout = "/Views/Shared/Layout.cshtml"; }
+
+<h1>Detalhes do Cliente</h1>
+@Model.ClienteId
+@Model.Name
+@Model.Email
+@Model.Password
+
+
+<a class="btn btn-primary" href="/cliente/index">Voltar</a>

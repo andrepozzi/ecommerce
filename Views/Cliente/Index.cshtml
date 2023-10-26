@@ -1,0 +1,42 @@
+@model List<Cliente>
+@{ Layout = "/Views/Shared/Layout.cshtml"; }
+
+    <h1>Lista de Clientes</h1>
+    <form  method="POST">
+<div class="input-group mb-3">
+     <input type="text" class="form-control" name="filtronome" aria-describedby="filtronome" placeholder="Nome">
+  <div class="input-group-append">
+    <button class="btn btn-outline-secondary" action="/cliente/search"  type="submit" id="button-addon2">Busca</button>
+
+  </div>
+</div>
+</form>
+
+    <table class="table table-hover">
+         <thead class="table-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Email</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+         </thead>
+  <tbody>
+        @foreach(Cliente c in Model)
+        {
+        <tr>
+            <td>@c.ClienteId</td>
+            <td>@c.Name</td>
+            <td>@c.Email</td>
+            <td><a class="btn btn-info" href="/cliente/details/@c.ClienteId">Detalhes</a></td>
+            <td><a class="btn btn-danger" href="/cliente/delete/@c.ClienteId">Apagar</a></td>
+            <td><a class="btn btn-primary" href="/cliente/update/@c.ClienteId">Editar</a></td>
+        </tr>
+
+    }
+    </tbody>
+    </table>
+
+    <a class="btn btn-success" href="/cliente/create">Adicionar</a>

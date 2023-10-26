@@ -1,0 +1,19 @@
+@{ Layout = "/Views/Shared/Layout.cshtml"; }
+
+<h1>Cadastro de Produtos</h1>
+
+<form action="/produto/create" method="POST">
+
+    <div>
+        <label>Nome</label>
+        <input type="text" class="form-control" name="nome"/>
+    </div>
+
+    <div>
+        <label>Preço</label>
+        <input type="text" class="form-control" name="preco"/>
+    </div>
+
+    <button class="btn btn-primary" style="margin-top: 20px">Salvar</button>
+
+</form>

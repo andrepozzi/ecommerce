@@ -1,0 +1,20 @@
+@model Produto
+@{ Layout = "/Views/Shared/Layout.cshtml"; }
+
+<h1>Atualização de Produtos</h1>
+
+<form action="/produto/update" method="POST">
+
+    <div>
+        <label>Nome</label>
+        <input type="text" class="form-control" name="nome" value="@Model.Nome" />
+    </div>
+
+    <div>
+        <label>Preço</label>
+        <input type="text" class="form-control" name="preco" value="@Model.Preco" />
+    </div>
+
+    <button class="btn btn-primary" style="margin-top: 20px">Salvar</button>
+
+</form>

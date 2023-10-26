@@ -1,0 +1,24 @@
+@{ Layout = "/Views/Shared/Layout.cshtml"; }
+
+<h1>Cadastro de Cliente</h1>
+
+<form action="/cliente/create" method="POST">
+
+    <div>
+        <label>Nome</label>
+        <input type="text" class="form-control" name="name"/>
+    </div>
+
+    <div>
+        <label>Email</label>
+        <input type="text" class="form-control" name="email"/>
+    </div>
+
+     <div>
+        <label>Password</label>
+        <input type="password" class="form-control" name="password"/>
+    </div>
+
+    <button class="btn btn-primary" style="margin-top: 20px">Salvar</button>
+
+</form>
